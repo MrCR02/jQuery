@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Q6</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <a href="index.html">Home</a>
+        <div  id="iddiv"> 
+            <span>This is a span</span>
+            <p>This is a Paragraph</p>
+            <button id="button1">Click to see the effect</button> 
+        </div>
+        <span id="op"></span>
+       </body>
+       <script>
+           $(document).ready(function(){
+                $("#op").html(`<br>${$("#iddiv > *").length} elements found`);
+           });
+       </script>
+</html>

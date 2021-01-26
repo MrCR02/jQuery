@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>
+            Q5
+        </title>
+    </head>
+    <style>
+        p {
+            margin: 8px;
+            font-size: 16px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <body>
+        <a href="index.html">Home</a>
+        <p>jQuery exercise</p>
+        <button id = "btn">Click to see the effect</button>
+    </body>
+        <script> 
+           $('#btn').click(function (){
+                $("p").after("with solution.<br>");
+           });
+        </script>
+</html>

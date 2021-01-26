@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Q12</title>
+        <script src="https://code.jquery.com/jquery-git.js"></script>
+        <style>
+            div {
+                width: 20px;
+                height: 20px;
+                margin: 5px;
+                float: left;
+                border: 2px solid green;
+                }
+                .red {
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="index.html">Home</a>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <button  id="button1">Click to see the effect</button>
+        <script>
+            $('#button1').click(function(){ 
+                $( "body" ).find( "div" ).eq( 3 ).addClass( "red" );
+            });
+        </script>
+    </body>
+</html>

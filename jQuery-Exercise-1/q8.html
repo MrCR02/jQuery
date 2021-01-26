@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Q8</title>
+        <script src="https://code.jquery.com/jquery-git.js"></script>
+    </head>
+  <body>
+    <a href="index.html">Home</a>
+    <p>jQuery Exercises, Practice, <em title="Real life jQuery or all.">Solution</em>.</p>
+    <p id="id"></p>
+    <button id="btn">Click to see the effect</button>
+    <script>
+        $('#btn').click(function(){ 
+        const title = $( "em" ).attr( "title" );
+        $("#id").text(title);});
+    </script>
+  </body>
+</html>

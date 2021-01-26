@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Q4
+        </title>
+    </head>
+    <style>
+        p {
+            margin: 8px;
+            font-size: 16px;
+        }
+        .rapid_font_color{
+            color: blue;
+        }
+        .rapid_background {
+            background: orange;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <body>
+        <a href="index.html">Home</a>
+        <p>PHP</p>
+        <p>Java</p>
+        <p>Python</p>
+        <button id = "btn">Click me</button>
+    </body>
+        <script> 
+           $('#btn').click(function (){
+                $("p").last().addClass('rapid_font_color rapid_background');
+           });
+        </script>
+</html>

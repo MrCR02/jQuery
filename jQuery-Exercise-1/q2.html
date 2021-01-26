@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            Q2
+        </title>
+        <script src= "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script> 
+            $(document).ready(function () { 
+                $("p").each(function () { 
+                    let t = $(this); 
+                    t.html(t.text().replace(/(^\w+)/, '<b>$1</b>')); 
+                }); 
+            }); 
+        </script>
+    </head>
+    <body>
+        <a href="index.html">Home</a>
+        <p>PHP exercise</p>
+        <p>Java Exercise</p>
+        <p>python exercise</p>
+        <p>JavaScript exercise</p>
+
+        
+    </body>
+</html>

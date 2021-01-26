@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Q9</title>
+        <script src="https://code.jquery.com/jquery-git.js"></script>
+    </head>
+    <body>
+        <a href="index.html">Home</a>
+        <div>
+            <label>
+            <input type="radio" name="color"  value="Red">
+            <span>name?</span>
+            </label>
+        </div>
+        <div>
+            <label>
+            <input type="radio" name="color"  value="Green">
+            <span>value?</span>
+            </label>
+        </div>
+        <div>
+            <label>
+            <input type="radio" name="color"  value="Black">
+            <span>value?</span>
+            </label>
+        </div>
+        <button id="button1">Click to see the  effect</button>
+        <script>
+            $('#button1').click(function(){ 
+                $( "input[value='Red']" ).next().text( " Red " );
+            });
+        </script>
+    </body>
+</html>

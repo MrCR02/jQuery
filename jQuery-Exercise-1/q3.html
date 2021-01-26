@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+            Q3
+        </title>
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <body>
+        <a href="index.html">Home</a>
+        <textarea name="txt" id="tarea" cols="30" rows="10"></textarea>
+        <button id = "btn">Click me</button>
+    </body>
+        <script> 
+           $('#btn').click(function (){
+               const value = $('textarea#tarea').val();
+               alert(value);
+           });
+        </script>
+</html>
