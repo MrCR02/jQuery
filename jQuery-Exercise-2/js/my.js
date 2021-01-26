@@ -52,7 +52,6 @@ $(document).ready(function(){
             $(`#item${cnt}`).fadeIn();
         }
         cnt++;
-        $("#modify").show();
     });
 });
 
@@ -100,6 +99,7 @@ function updateData(id){
 
 // when any individual check box is clicked
 function viewDelete(name){
+    $("#modify").show();
     let id;
     let change = true;
     $("#selAll").show();
@@ -122,6 +122,7 @@ function viewDelete(name){
         if(toDel.length === 0){
             $(`#delSel`).css("display", "none");
             $("#rowCount").hide();
+            $("#modify").hide();
         }
     }
 }
@@ -157,6 +158,7 @@ function deleteData(name){
 //when select all check box is checked
 function onSelectAllChange(){
     if($(`#delAll`).is(":checked")){
+        $("#modify").show();
         toDel = [];
         $('input:checkbox').prop('checked',true);
         for(elem in data){
@@ -167,6 +169,7 @@ function onSelectAllChange(){
         $("#rowCount").html(`${data.length} rows selected`);
     }
     else{
+        $("#modify").hide();
         $('input:checkbox').prop('checked',false);
         $(`#delSel`).css("display", "none");
         toDel = [];
