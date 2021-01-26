@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>
+            Exercise 2
+        </title>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/my.js"></script>
+        <style>
+            .styling{
+                width: 200px;
+                height: 30px;
+            }
+
+            .edit{
+                margin-left: 10px;
+                width: 100px;
+                height: 30px;
+                border-radius: 10px;
+                background-color: lightgreen;
+            }
+
+            .delete{
+                margin-left: 10px;
+                width: 100px;
+                height: 30px;
+                border-radius: 10px;
+                background-color: red;
+            }
+            #selAll{
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="text" name="fname" id="fname" placeholder="First name">
+            <input type="text" name="lname" id="lname" placeholder="Last name">
+            <input type="text" name="color" id="color" placeholder="#color">
+            <select name="size" id="size">
+                <option value="large">large</option>
+                <option value="medium">medium</option>
+                <option value="small">small</option>
+            </select>
+            <input type="hidden" name="id" id="id">
+            <button id="add">Add</button>
+            <button id="update" onclick="updateData(document.getElementById('id').value)"  style="display: none">Update</button>
+        </div>
+
+        <div id = "list">
+            <div id = "selAll" style="display: none;"><input type="checkbox" name="delAll" onchange = onSelectAllChange() id = "delAll">&nbsp&nbsp 
+                <label>Select all</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <span id="rowCount"></span>&nbsp&nbsp&nbsp
+                <button class = "delete" id = "delSel" onclick=deleteAll() style = "display:none">Delete</button></div>
+        </div>
+
+        <div id = "modify" style="display: none;">
+            <p>Modify above selected items:</p>
+            <input type="text" name="bgcolor" id="modifyColor" placeholder="#color">
+            <select name="modifySize" id="modifySize">
+                <option value="large">large</option>
+                <option value="medium">medium</option>
+                <option value="small">small</option>
+            </select>
+            <button onclick="modify()" class="edit">Apply</button>
+        </div>
+    </body>
+</html>
